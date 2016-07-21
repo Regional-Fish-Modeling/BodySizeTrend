@@ -1,12 +1,9 @@
-#### Model year effect of adult BKT size with month-level random intercept ####
-setwd("I:/projects/BKTREG/Analysis/TLOverTime")
-
+#### Model year-effect for adult BKT size ####
 setwd("...")
 require(lme4)
 require(sjPlot)
 
 d <- read.csv("REGBKT_MASTER_23Mar15.csv")
-
 d$TotalLength_mm <- as.numeric(d$TotalLength_mm)
 d$Year <- as.numeric(d$Year)
 d$Date <- as.POSIXlt(as.character(d$Date), format= "%m/%d/%Y")
